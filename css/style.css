@@ -1,0 +1,611 @@
+/* VARIABLES */
+:root {
+    --color-principal: #2563eb;
+    --color-principal-dark: #1e3a8a;
+    --color-fondo: #f4f6f9;
+    --color-superficie: #ffffff;
+    --color-texto: #2c3e50;
+    --color-texto-oscuro: #1f263d;
+    --color-secundario: #7f8c8d;
+    --color-subtexto: #aeb6ca;
+    --sombra: 0 4px 12px rgba(0,0,0,.08);
+    --sombra-tarjeta: 0 8px 18px rgba(0,0,0,.08);
+    --sombra-hover: 0 14px 24px rgba(0,0,0,.12);
+    --transicion: .25s;
+
+    /* Tipos de entrenamiento */
+    --color-series: #e74c3c;
+    --color-tempo: #e67e22;
+    --color-tirada: #f1c40f;
+    --color-rodaje: #2ecc71;
+    --color-kilometros: #3498db;
+    --color-horas: #9b59b6;
+}
+
+/* RESET */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.5;
+}
+
+/* CONTENEDOR */
+.container {
+    width: min(1200px, 95%);
+    margin: auto;
+}
+
+/* HEADER */
+
+header {
+    background:linear-gradient(
+        135deg,
+        var(--color-principal),
+        var(--color-principal-dark)
+    );
+    color: white;
+    text-align: center;
+    padding: 45px 35px;
+    border-radius: 0 0 22px 22px;
+    box-shadow: var(--sombra);
+}
+
+.header-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,.25));
+}
+
+.header-logo h1 {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    margin-top: 12px;
+    font-size: 1.15rem;
+}
+
+.header-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.header-card {
+    background:rgba(255,255,255,.95);
+    color: var(--color-texto-oscuro);
+    width: 350px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 24px;
+    border-radius: 16px;
+    box-shadow: var(--sombra-tarjeta);
+    box-sizing: border-box;
+}
+
+.header-icono {
+    font-size: 34px;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.header-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: .85;
+}
+
+.header-valor {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+/* MAIN & SECCIONES */
+main {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+#dashboard, #timeline, #statistics {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.titulo-seccion {
+    margin-bottom: 25px;
+    border-bottom: 3px solid #2b3045;
+    padding-bottom: 15px;
+}
+
+.titulo-seccion h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--color-texto);
+}
+
+/* GRIDS PRINCIPALES */
+.dashboard-grid, 
+.statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.ultimo-entrenamiento {
+    grid-column: 1 / 4;
+}
+
+.ultimo-contenido {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.dato-ultimo {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-subtexto);
+    margin-bottom: 8px;
+}
+
+.dato-ultimo span:last-child {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* TARJETAS DASHBOARD */
+.dashboard-card {
+    position: relative;
+    background: var(--color-texto-oscuro);
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0,0,0,.15);
+    transition: var(--transicion);
+    min-height: 170px;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 28px rgba(0,0,0,.22);
+}
+
+.dashboard-titulo {
+    display: block;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #b7c0d8;
+    margin-bottom: 25px;
+}
+
+.dashboard-valor {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.unidad {
+    font-size: 18px;
+    font-weight: 500;
+    color: #cfd5e4;
+    margin-bottom: 8px;
+}
+
+/* BORDES DE TARJETAS DASHBOARD */
+.entrenamientos { border-left: 6px solid var(--color-principal); }
+.kilometros     { border-left: 6px solid var(--color-kilometros); }
+.ritmo-medio    { border-left: 6px solid var(--color-tirada); }
+.mejor-ritmo    { border-left: 6px solid var(--color-series); }
+.horas-acumuladas { border-left: 6px solid var(--color-horas); }
+.mejor-tirada   { border-left: 6px solid var(--color-tempo); }
+
+/* RECORDS */
+.records-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.record-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: var(--color-superficie);
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: var(--sombra-tarjeta);
+    transition: var(--transicion);
+    font-weight: bold;
+}
+
+.record-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-hover);
+}
+
+.record-icono {
+    font-size: 48px;
+}
+
+.record-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.record-titulo {
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.record-valor {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    font-size: 40px;
+    font-weight: 900; /* Negrita extra marcada */
+    color: #1f2745;   /* Color azul/gris oscuro idéntico a la imagen */
+    line-height: 1;
+}
+
+/* El número o texto principal dentro del valor */
+.record-valor span:first-child,
+.record-valor {
+    color: #1f2745;
+}
+
+/* La unidad (min/km, km) en peso normal para marcar el contraste */
+.record-valor span:last-child {
+    font-size: 20px;
+    font-weight: 700;
+    color: #555555;
+}
+
+.record-extra{
+    margin-top:12px;
+    display:flex;
+    gap:8px;
+    color:#888;
+    font-size:15px;
+}
+
+/* COLORES RECORDS */
+.record-card.ritmo  { border-left: 8px solid #EFBF04; }
+.record-card.tirada { border-left: 8px solid #C4C4C4; }
+.record-card.tempo  { border-left: 8px solid #ce8946; }
+.record-card.serie  { border-left: 8px solid #FF0000; }
+
+/* TIMELINE */
+.timeline-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-texto-oscuro);
+    color: white;
+    border: none;
+    border-radius: 18px;
+    padding: 22px 28px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: var(--transicion);
+    box-shadow: 0 8px 18px rgba(0,0,0,.12);
+}
+
+.timeline-header:hover {
+    background: #28304d;
+}
+
+.timeline-flecha {
+    font-size: 18px;
+    width: 25px;
+}
+
+.timeline-titulo {
+    flex: 1;
+    text-align: left;
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.timeline-resumen {
+    color: #bfc7d8;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.timeline-contenido {
+    display: none;
+    margin-top: 20px;
+}
+
+.timeline-contenido.abierto {
+    display: block;
+}
+
+/* TARJETAS TIMELINE */
+.timeline-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: var(--sombra-tarjeta);
+    transition: var(--transicion);
+    font-weight: bold;
+}
+
+.timeline-card:hover {
+    transform: translateY(-3px);
+}
+
+.timeline-tipo {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.timeline-fecha {
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.timeline-datos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* COLOR TARJETAS TIMELINE */
+.timeline-card.series { border-left: 7px solid var(--color-series); }
+.timeline-card.tempo  { border-left: 7px solid var(--color-tempo); }
+.timeline-card.tirada { border-left: 7px solid var(--color-tirada); }
+.timeline-card.rodaje { border-left: 7px solid var(--color-rodaje); }
+
+/* ESTADISTICAS */
+.statistics-grid {
+    margin-top: 30px;
+}
+
+.statistics-card {
+    background: var(--color-superficie);
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: var(--sombra-tarjeta);
+    transition: var(--transicion);
+    border-top: 6px solid var(--color-principal);
+}
+
+.statistics-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover);
+}
+
+.statistics-header {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-texto-oscuro);
+    padding-bottom: 15px;
+    margin-bottom: 18px;
+    border-bottom: 2px solid #28304d;
+}
+
+.statistics-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.statistics-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+}
+
+.statistics-row span {
+    color: #666;
+}
+
+.statistics-row strong {
+    font-size: 18px;
+    color: var(--color-texto-oscuro);
+    font-weight: 700;
+}
+
+.statistics-row:not(:last-child) {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+/* DIARIO */
+#diary{
+    margin-top:60px;
+    margin-bottom:60px;
+}
+
+#diarioContainer{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+/* TARJETA */
+.diario-card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+    transition:.25s;
+    font-weight: bold;
+}
+
+.diario-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 28px rgba(0,0,0,.12);
+}
+
+
+/* COLORES */
+.diario-card.series { border-left: 7px solid var(--color-series); }
+.diario-card.tempo  { border-left: 7px solid var(--color-tempo); }
+.diario-card.tirada { border-left: 7px solid var(--color-tirada); }
+.diario-card.rodaje { border-left: 7px solid var(--color-rodaje); }
+
+/* CABECERA */
+.diario-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.tipo-texto{
+    font-size:34px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+/* Colores */
+.tipo-texto.series { color:var(--color-series); }
+.tipo-texto.tempo  { color:var(--color-tempo); }
+.tipo-texto.tirada { color:var(--color-tirada); }
+.tipo-texto.rodaje { color:var(--color-rodaje); }
+
+.diario-fecha{
+    font-size:18px;
+    color:#777;
+}
+
+/* DATOS */
+.diario-datos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:30px;
+    margin-bottom:35px;
+}
+
+.dato{
+    display:flex;
+    flex-direction:column;
+}
+
+.dato-label{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:#888;
+    margin-bottom:8px;
+}
+
+.dato-valor{
+    font-size:32px;
+    font-weight:700;
+    color:#1f2745;
+}
+
+/* TEXTO */
+.diario-seccion{
+    margin-top:22px;
+}
+
+.diario-label{
+    display:block;
+    margin-bottom:10px;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:#888;
+}
+
+.diario-texto{
+    font-size:18px;
+    line-height:1.7;
+    color:#2c3e50;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-texto-oscuro);
+    font-size: 14px;
+    border-top: 1px solid rgba(0,0,0,.08);
+}
+
+.footer img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .dashboard-grid, 
+    .statistics-grid, 
+    .records-grid, 
+    .ultimo-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .ultimo-entrenamiento {
+        grid-column: span 1;
+    }
+}

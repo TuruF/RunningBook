@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunningBook</title>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header class="header">
+
+            <div class="container">
+
+                <div class="header-logo">
+                    <span class="logo-icon"><img src="img/favicon.png"></span>
+                    <h1>RUNNINGBOOK</h1>
+                </div>
+
+                <p class="subtitle">
+                    Mi diario personal de entrenamiento
+                </p>
+
+                <div class="header-cards">
+
+                    <article class="header-card">
+
+                        <span class="header-icono">📅</span>
+
+                        <div class="header-info">
+
+                            <span class="header-label">Desde</span>
+                                
+                            <span id="fechaInicio" class="header-valor"></span>
+                            
+                        </div>
+
+                    </article>
+
+                    <article class="header-card">
+
+                        <span class="header-icono">📖</span>
+
+                        <div class="header-info">
+
+                            <span class="header-label">Historia</span>
+                                
+                            <span id="dias" class="header-valor"></span>
+                            
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <main>
+
+        <div class="container">
+
+            <!-- DASHBOARD -->
+            <section id="dashboard">
+
+                <div class="titulo-seccion">
+                    <h2>📊 DASHBOARD</h2>
+                </div>
+
+                <div class="dashboard-grid">
+
+                    <!-- Entrenamientos -->
+                    <article class="dashboard-card entrenamientos">
+                        <span class="dashboard-titulo">Entrenamientos</span>
+
+                        <div class="dashboard-valor" id="totalEntrenamientos">
+                            --
+                        </div>
+                    </article>
+
+                    <!-- Kilómetros -->
+                    <article class="dashboard-card kilometros">
+                        <span class="dashboard-titulo">Kilómetros acumulados</span>
+
+                        <div class="dashboard-valor">
+                            <span id="totalKm">--</span>
+                        </div>
+                    </article>
+
+                    <!-- Ritmo medio -->
+                    <article class="dashboard-card ritmo-medio">
+                        <span class="dashboard-titulo">Ritmo medio</span>
+
+                        <div class="dashboard-valor">
+                            <span id="ritmoMedio">--:--</span>
+                        </div>
+                    </article>
+
+                    <!-- Mejor ritmo -->
+                    <article class="dashboard-card mejor-ritmo">
+                        <span class="dashboard-titulo">Mejor ritmo</span>
+
+                        <div class="dashboard-valor">
+                            <span id="mejorRitmo">--:--</span>
+                        </div>
+                    </article>
+
+                    <!-- Horas acumuladas -->
+                    <article class="dashboard-card horas-acumuladas">
+                        <span class="dashboard-titulo">Horas acumuladas</span>
+
+                        <div class="dashboard-valor">
+                            <span id="horasAcumuladas">--</span>
+                        </div>
+                    </article>
+
+                    <!-- Mejor tirada -->
+                    <article class="dashboard-card mejor-tirada">
+                        <span class="dashboard-titulo">Mejor tirada</span>
+
+                        <div class="dashboard-valor">
+                            <span id="mejorTirada">--</span>
+                        </div>
+                    </article>
+
+                    <!-- Último entrenamiento -->
+                    <article class="dashboard-card ultimo-entrenamiento">
+
+                        <span class="dashboard-titulo">
+                            Último entrenamiento
+                        </span>
+
+                        <div class="ultimo-contenido">
+
+                            <div class="dato-ultimo">
+                                <span class="label">Fecha</span>
+                                <span id="ultimoFecha">--</span>
+                            </div>
+
+                            <div class="dato-ultimo">
+                                <span class="label">Tipo</span>
+                                <span id="ultimoTipo">--</span>
+                            </div>
+
+                            <div class="dato-ultimo">
+                                <span class="label">Distancia</span>
+                                <span id="ultimoKm">-- km</span>
+                            </div>
+
+                            <div class="dato-ultimo">
+                                <span class="label">Tiempo</span>
+                                <span id="ultimoTiempo">--</span>
+                            </div>
+
+                            <div class="dato-ultimo">
+                                <span class="label">Ritmo</span>
+                                <span id="ultimoRitmo">-- min/km</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+                </div>
+
+            </section>
+
+            <!-- RECORDS -->
+            <section id="records">
+
+                <div class="titulo-seccion">
+                    <h2>🏆 RÉCORDS</h2>
+                </div>
+
+                <div class="records-grid">
+
+                    <!-- Mejor ritmo -->
+                    <article class="record-card ritmo">
+
+                        <div class="record-icono">🥇</div>
+
+                            <div class="record-info">
+                                <span class="record-titulo">Mejor ritmo</span>
+                            
+                                <div class="record-valor">
+                                    <span id="recordRitmo">--:--</span>
+                                    <span class="unidad">min/km</span>
+                                </div>
+
+                                <div class="record-extra">
+                                    <span id="recordRitmoFecha">--</span>
+                                    <span id="recordRitmoTipo">--</span>
+                                </div>
+                            </div>
+
+                    </article>
+
+                    <!-- Mejor tirada -->
+                    <article class="record-card tirada">
+
+                        <div class="record-icono">🥈</div>
+
+                            <div class="record-info">
+                                <span class="record-titulo">Mejor tirada</span>
+
+                                <div class="record-valor">
+                                    <span id="recordTirada">--</span>
+                                    <span class="unidad">km</span>
+                                </div>
+
+                                <div class="record-extra">
+                                    <span id="recordTiradaFecha">--</span>
+                                </div>
+                            </div>
+
+                    </article>
+
+                    <!-- Mejor tempo -->
+                    <article class="record-card tempo">
+
+                        <div class="record-icono">🥉</div>
+
+                            <div class="record-info">
+                                <span class="record-titulo">Mejor tempo</span>
+
+                                <div class="record-valor">
+                                    <span id="recordTempo">--:--</span>
+                                    <span class="unidad">min/km</span>
+                                </div>
+
+                            <div class="record-extra">
+                                <span id="recordTempoFecha">--</span>
+                            </div>
+                            </div>
+
+                    </article>
+
+                    <!-- Mejor serie -->
+                    <article class="record-card serie">
+
+                        <div class="record-icono">🔥</div>
+
+                            <div class="record-info">
+                                <span class="record-titulo"> Mejor serie</span>
+
+                                <div class="record-valor">
+                                    <span id="recordSerie">--:--</span>
+                                    <span class="unidad">min/km</span>
+                                </div>
+
+                                <div class="record-extra">
+                                    <span id="recordSerieFecha">--</span>
+                                </div>
+                            </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- CRONOLOGIA -->
+            <section id="timeline">
+
+                <div class="titulo-seccion">
+                    <h2>📅 CRONOLOGÍA</h2>
+                </div>
+
+                <div id="timelineContainer"></div>
+
+            </section>
+
+            <!-- ESTADISTICAS -->
+            <section id="statistics">
+
+                <div class="titulo-seccion">
+                    <h2>📈 ESTADÍSTICAS</h2>
+                </div>
+
+                <div id="statisticsGrid" class="statistics-grid">
+                    <!-- Generado desde statistics.js -->
+                </div>
+
+            </section>
+
+            <!-- DIARIO -->
+            <section id="diary">
+
+                <div class="titulo-seccion">
+                    <h2>📖 DIARIO</h2>
+                </div>
+
+                <div id="diarioContainer">
+                <!-- Generado desde diario.js -->
+                </div>
+
+            </section>
+
+        </div>  
+
+        </main>
+
+        <footer class="footer">
+
+            <img src="img/favicon.png" alt="RunningBook">
+
+            <span>RUNNINGBOOK © Entrena. Registra. Evoluciona.</span>
+
+        </footer>
+        
+        <script src="js/helpers.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/dashboard.js"></script>
+        <script src="js/records.js"></script>
+        <script src="js/timeline.js"></script>
+        <script src="js/statistics.js"></script>
+        <script src="js/diario.js"></script>
+        <script src="js/app.js"></script>
+
+    </div>
+
+</body>
+
+</html>
