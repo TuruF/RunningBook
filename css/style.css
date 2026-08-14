@@ -466,6 +466,115 @@ main {
     border-bottom: 1px solid #f2f2f2;
 }
 
+/* EVOLUCIÓN CORPORAL */
+#body-evolution{
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+#bodyEvolutionGrid{
+    margin-top:30px;
+}
+
+/* Tarjeta */
+.peso-card{
+    background:#ffffff;
+    border-radius:16px;
+    border-top:6px solid #2f66d0;
+    box-shadow:var(--sombra-tarjeta);
+    padding:30px 25px;
+    transition:.25s;
+}
+
+/* Cabecera */
+.peso-header{
+    font-size:22px;
+    font-weight:700;
+    color:#1f2745;
+    padding-bottom:18px;
+    border-bottom:2px solid #2b3045;
+    text-align:left;
+}
+
+/* Datos */
+.peso-body{
+    margin-top:8px;
+}
+
+.peso-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 0;
+    border-bottom:1px solid #eeeeee;
+    font-size:16px;
+    color:#666;
+}
+
+.peso-row:last-child{
+    border-bottom:none;
+}
+
+.peso-row strong{
+    color:#1f2745;
+    font-size:16px;
+    font-weight:700;
+}
+
+/* Desplegable por año */
+
+.peso-año{
+    margin-bottom:25px;
+}
+
+.peso-año-header{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#2980b9;
+    border:none;
+    border-radius:14px;
+    padding:20px 25px;
+    font-family:inherit;
+    font-size:22px;
+    font-weight:700;
+    color:white;
+    cursor:pointer;
+    box-shadow:var(--sombra);
+    transition:.25s;
+}
+
+.peso-año-header:hover{
+    background:#1f6391;
+    box-shadow:var(--sombra-tarjeta);
+}
+
+.peso-flecha{
+    font-size:16px;
+}
+
+/* Tarjetas */
+.peso-tarjetas{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    transition:
+        max-height.35s ease, 
+        opacity.25s ease, 
+        margin-top.35s ease;
+}
+
+/* Año abierto */
+.peso-año.abierto .peso-tarjetas{
+    max-height:2000px;
+    opacity:1;
+    margin-top:25px;
+}
+
 /* DIARIO */
 #diary{
     margin-top:60px;
@@ -492,7 +601,6 @@ main {
     transform:translateY(-4px);
     box-shadow:0 14px 28px rgba(0,0,0,.12);
 }
-
 
 /* COLORES */
 .diario-card.series { border-left: 7px solid var(--color-series); }
@@ -600,7 +708,8 @@ main {
 
     .dashboard-grid, 
     .statistics-grid, 
-    .records-grid, 
+    .records-grid,
+    .peso-tarjetas, 
     .ultimo-contenido {
         grid-template-columns: 1fr;
     }

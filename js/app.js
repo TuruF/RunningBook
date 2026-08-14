@@ -21,6 +21,9 @@ function iniciarApp() {
 
     // Estadísticas
     cargarStatistics();
+
+    // Evolución corporal
+    cargarPeso();
     
     // Diario
     cargarDiario();
