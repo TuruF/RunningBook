@@ -1,5 +1,14 @@
 [
     {
+    "fecha":"2026-08-15",
+    "tipo":"Tirada",
+    "distancia":16.1,
+    "tiempo":"01:24:00",
+    "ritmo":"5:13",
+    "temperatura":"22ºC",
+    "sensaciones":"Hoy el día era fresco e incluso con lluvia ligera lo que hace que vaya más rápido sin tanto calor, también he podido meter cambios de ritmo sin cansarme demasiado al final de la sesión."
+    },
+    {
     "fecha":"2026-08-08",
     "tipo":"Tirada",
     "distancia":16.25,
