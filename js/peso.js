@@ -61,7 +61,7 @@ async function cargarPeso() {
                 </span>
 
                 <span class="peso-flecha">
-                    ▶
+                    ${indice === 0 ? "▼" : "▶"}
                 </span>
 
             `;
@@ -184,9 +184,9 @@ async function cargarPeso() {
                 bloqueAño.classList.toggle("abierto");
 
                 const abierto = bloqueAño.classList.contains("abierto");
+                const flecha = cabecera.querySelector(".peso-flecha");
 
-                cabecera.querySelector(".peso-flecha").textContent =
-                    abierto ? "▼" : "▶";
+                flecha.textContent = abierto ? "▼" : "▶";
 
             });
 

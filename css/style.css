@@ -195,7 +195,7 @@ main {
     font-weight: 700;
 }
 
-/* TARJETAS DASHBOARD */
+/* Tarjetas del dashboard */
 .dashboard-card {
     position: relative;
     background: var(--color-texto-oscuro);
@@ -237,7 +237,7 @@ main {
     margin-bottom: 8px;
 }
 
-/* BORDES DE TARJETAS DASHBOARD */
+/* Bordes tarjetas del dashboard */
 .entrenamientos { border-left: 6px solid var(--color-principal); }
 .kilometros     { border-left: 6px solid var(--color-kilometros); }
 .ritmo-medio    { border-left: 6px solid var(--color-tirada); }
@@ -317,7 +317,7 @@ main {
     font-size:15px;
 }
 
-/* COLORES RECORDS */
+/* Colores records */
 .record-card.ritmo  { border-left: 8px solid #EFBF04; }
 .record-card.tirada { border-left: 8px solid #C4C4C4; }
 .record-card.tempo  { border-left: 8px solid #ce8946; }
@@ -372,7 +372,7 @@ main {
     display: block;
 }
 
-/* TARJETAS TIMELINE */
+/* Tarjetas del timeline */
 .timeline-card {
     background: white;
     border-radius: 16px;
@@ -402,7 +402,7 @@ main {
     grid-template-columns: repeat(3, 1fr);
 }
 
-/* COLOR TARJETAS TIMELINE */
+/* Color tajetas timeline */
 .timeline-card.series { border-left: 7px solid var(--color-series); }
 .timeline-card.tempo  { border-left: 7px solid var(--color-tempo); }
 .timeline-card.tirada { border-left: 7px solid var(--color-tirada); }
@@ -475,7 +475,7 @@ main {
     margin-top:30px;
 }
 
-/* Tarjeta */
+/* Tarjeta del peso */
 .peso-card{
     background:#ffffff;
     border-radius:16px;
@@ -557,24 +557,18 @@ main {
     font-size:16px;
 }
 
-/* Tarjetas */
+/* Tarjetas del peso */
 .peso-tarjetas{
-    display:grid;
+    display:none;
     grid-template-columns:repeat(4,1fr);
     gap:25px;
-    max-height:0;
-    opacity:0;
-    transition:
-        max-height.35s ease, 
-        opacity.25s ease, 
-        margin-top.35s ease;
+    margin-top:25px;
 }
 
 /* Año abierto */
 .peso-año.abierto .peso-tarjetas{
-    max-height:2000px;
-    opacity:1;
-    margin-top:25px;
+    display: grid;
+    
 }
 
 /* DIARIO */
@@ -589,7 +583,7 @@ main {
     gap:30px;
 }
 
-/* TARJETA */
+/* Tarjetas del diario */
 .diario-card{
     background:#ffffff;
     border-radius:18px;
@@ -604,13 +598,13 @@ main {
     box-shadow:0 14px 28px rgba(0,0,0,.12);
 }
 
-/* COLORES */
+/* Colores */
 .diario-card.series { border-left: 7px solid var(--color-series); }
 .diario-card.tempo  { border-left: 7px solid var(--color-tempo); }
 .diario-card.tirada { border-left: 7px solid var(--color-tirada); }
 .diario-card.rodaje { border-left: 7px solid var(--color-rodaje); }
 
-/* CABECERA */
+/* Cabecera */
 .diario-header{
     display:flex;
     justify-content:space-between;
@@ -636,7 +630,7 @@ main {
     color:#777;
 }
 
-/* DATOS */
+/* Datos del diario */
 .diario-datos{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
@@ -663,7 +657,7 @@ main {
     color:#1f2745;
 }
 
-/* TEXTO */
+/* Texto del diario */
 .diario-seccion{
     margin-top:22px;
 }
@@ -720,22 +714,5 @@ main {
     .ultimo-entrenamiento {
         grid-column: span 1;
     }
-    
-    /* EVOLUCIÓN CORPORAL EN MÓVIL */
-    .peso-tarjetas{
-        padding:0;
-        max-height:0;
-        overflow:hidden;
-    }
 
-    .peso-año.abierto .peso-tarjetas{
-        max-height:none;
-        overflow:visible;
-        margin-top:20px;
-        padding-bottom:10px;
-    }
-
-    .peso-card{
-        width:100%;
-    }
 }
