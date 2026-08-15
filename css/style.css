@@ -202,7 +202,6 @@ main {
     color: #ffffff;
     border-radius: 16px;
     padding: 25px;
-    overflow: hidden;
     box-shadow: 0 8px 18px rgba(0,0,0,.15);
     transition: var(--transicion);
     min-height: 170px;
@@ -488,6 +487,10 @@ main {
 
 /* Cabecera */
 .peso-header{
+    height: 52px;
+    display: flex;
+    align-items: center;
+    line-height: 1.25;
     font-size:22px;
     font-weight:700;
     color:#1f2745;
@@ -560,7 +563,6 @@ main {
     grid-template-columns:repeat(4,1fr);
     gap:25px;
     max-height:0;
-    overflow:hidden;
     opacity:0;
     transition:
         max-height.35s ease, 
@@ -676,6 +678,7 @@ main {
 }
 
 .diario-texto{
+    text-align: justify;
     font-size:18px;
     line-height:1.7;
     color:#2c3e50;
@@ -716,5 +719,23 @@ main {
 
     .ultimo-entrenamiento {
         grid-column: span 1;
+    }
+    
+    /* EVOLUCIÓN CORPORAL EN MÓVIL */
+    .peso-tarjetas{
+        padding:0;
+        max-height:0;
+        overflow:hidden;
+    }
+
+    .peso-año.abierto .peso-tarjetas{
+        max-height:none;
+        overflow:visible;
+        margin-top:20px;
+        padding-bottom:10px;
+    }
+
+    .peso-card{
+        width:100%;
     }
 }
