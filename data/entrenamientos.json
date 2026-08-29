@@ -1,5 +1,14 @@
 [
     {
+    "fecha":"2026-08-29",
+    "tipo":"Tirada",
+    "distancia":16,
+    "tiempo":"01:23:30",
+    "ritmo":"5:13",
+    "temperatura":"16ºC",
+    "sensaciones":"Esta sesión es un calco al último entreno con las mismas sensaciones, pero con menos temperatura."
+    },
+    {
     "fecha":"2026-08-22",
     "tipo":"Tirada",
     "distancia":16,
