@@ -1,5 +1,14 @@
 [
     {
+    "fecha":"2026-09-05",
+    "tipo":"Tirada",
+    "distancia":16.2,
+    "tiempo":"01:25:00",
+    "ritmo":"5:15",
+    "temperatura":"29ºC",
+    "sensaciones":"Amaneció el día nublado y como con calima por lo que el ambiente estaba más caluroso de lo normal y a consecuencia de ello el ritmo fue un poco más lento que en los últimos entrenos."
+    },    
+    {
     "fecha":"2026-08-29",
     "tipo":"Tirada",
     "distancia":16,
