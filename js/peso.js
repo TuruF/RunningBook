@@ -84,7 +84,7 @@ async function cargarPeso() {
 
                         <div class="peso-header">
 
-                            ${formatearFecha(registro.fecha)}
+                            ${formatearFechaSinAño(registro.fecha)}
 
                         </div>
 

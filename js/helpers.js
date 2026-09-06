@@ -78,6 +78,16 @@ function formatearMes(fecha) {
 
 }
 
+// Formato de fecha sin año
+function formatearFechaSinAño(fecha) {
+
+    return new Date(fecha).toLocaleDateString("es-ES", {
+        day: "numeric",
+        month: "long"
+    });
+
+}
+
 // Clase CSS
 function obtenerClase(tipo) {
 
