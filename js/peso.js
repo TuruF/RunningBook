@@ -181,12 +181,29 @@ async function cargarPeso() {
             // ABRIR / CERRAR AÑO
             cabecera.addEventListener("click", () => {
 
-                bloqueAño.classList.toggle("abierto");
-
                 const abierto = bloqueAño.classList.contains("abierto");
-                const flecha = cabecera.querySelector(".peso-flecha");
 
-                flecha.textContent = abierto ? "▼" : "▶";
+                document.querySelectorAll(".peso-año").forEach(bloque => {
+
+                    bloque.classList.remove("abierto");
+
+                    const flecha = bloque.querySelector(".peso-flecha");
+
+                    if (flecha) {
+                        flecha.textContent = "▶";
+                    }
+
+                });
+
+                if (!abierto) {
+
+                    bloqueAño.classList.add("abierto");
+
+                    const flecha = cabecera.querySelector(".peso-flecha");
+
+                    flecha.textContent = "▼";
+
+                }
 
             });
 
