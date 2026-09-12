@@ -1,5 +1,14 @@
 [
     {
+    "fecha":"2026-09-12",
+    "tipo":"Tirada",
+    "distancia":16,
+    "tiempo":"01:24:00",
+    "ritmo":"5:15",
+    "temperatura":"16ºC",
+    "sensaciones":"Día fresco lo que hace que el ritmo sea como los últimos entrenos. Estoy consolidando el ritmo de 5:15 por lo que ya es un ritmo cómodo para mí sin sufrir."
+    },      
+    {
     "fecha":"2026-09-05",
     "tipo":"Tirada",
     "distancia":16.2,
