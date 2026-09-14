@@ -25,6 +25,9 @@ function iniciarApp() {
     // Evolución corporal
     cargarPeso();
     
+    // Entrenos antiguos
+    cargarAntiguos()
+
     // Diario
     cargarDiario();
 
