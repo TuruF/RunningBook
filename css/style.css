@@ -563,10 +563,73 @@ main {
 /* Año abierto */
 .peso-año.abierto .peso-tarjetas{
     display: grid;
-    
 }
 
 /* ENTRENAMIENTOS ANTERIORES */
+#old-trainings{
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+#oldTrainingsContainer{
+    margin-top:30px;
+}
+
+#old-trainings .titulo-seccion p{
+    margin-top:8px;
+    color:var(--color-secundario);
+    font-size:15px;
+}
+
+.antiguos-tabla{
+    width:100%;
+    border-collapse:collapse;
+    background:#ffffff;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:var(--sombra-tarjeta);
+    text-align: center;
+}
+
+.antiguos-tabla thead{
+    background:#2f66d0;
+    color:white;
+}
+
+.antiguos-tabla th{
+    padding:16px 20px;
+    font-size:16px;
+    font-weight:700;
+}
+
+.antiguos-tabla td{
+    padding:14px 20px;
+    font-size:16px;
+    border-bottom:1px solid #eeeeee;
+}
+
+.antiguos-tabla tbody tr:nth-child(even){
+    background:#f7f9fc;
+}
+
+.antiguos-tabla tbody tr:hover{
+    background:#eef4fa;
+}
+
+.antiguos-tabla tbody tr:last-child td{
+    border-bottom:none;
+}
+
+.antiguos-tabla th:first-child,
+.antiguos-tabla td:first-child{
+    width:60px;
+    color:#7f8c8d;
+}
+
+.antiguos-tabla td strong{
+    color:#1f2745;
+    font-weight:700;
+}
 
 /* DIARIO */
 #diary{

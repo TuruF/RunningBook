@@ -21,7 +21,7 @@ async function cargarAntiguos() {
         tabla.innerHTML = `
             <thead>
                 <tr>
-                    <th>#</th>
+                    <th></th>
                     <th>Distancia</th>
                     <th>Tiempo</th>
                     <th>Ritmo</th>
