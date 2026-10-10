@@ -1,5 +1,14 @@
 [
     {
+    "fecha":"2026-10-10",
+    "tipo":"Tirada",
+    "distancia":17.5,
+    "tiempo":"01:33:00",
+    "ritmo":"5:19",
+    "temperatura":"9ºC",
+    "sensaciones":"Después de estar dos semanas sin salir a correr porque la semana pasada estuvo lloviendo, el ritmo se ha resentido un poquito y también puede afectar que estoy un poco constipado, pero en general todo bien porque es un buen ritmo sin sufrir."
+    },     
+    {
     "fecha":"2026-09-26",
     "tipo":"Tirada",
     "distancia":17.65,
