@@ -1,5 +1,14 @@
 [
     {
+    "fecha":"2026-10-12",
+    "tipo":"Tempo",
+    "distancia":13.5,
+    "tiempo":"01:10:00",
+    "ritmo":"5:11",
+    "temperatura":"13ºC",
+    "sensaciones":"Hoy he decidido hacer entreno de tempo ya que el otro día hice tirada larga y la verdad que ha ido genial, he mejorado el ritmo y lo más importante llego bien al final sin sufrir."
+    }, 
+    {
     "fecha":"2026-10-10",
     "tipo":"Tirada",
     "distancia":17.5,
