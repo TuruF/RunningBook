@@ -1,5 +1,14 @@
 [
     {
+    "fecha":"2026-10-17",
+    "tipo":"Tirada",
+    "distancia":17.52,
+    "tiempo":"01:35:00",
+    "ritmo":"5:25",
+    "temperatura":"17ºC",
+    "sensaciones":"Hoy el ritmo se ha visto afectado porque tenía en el cuádrices izquierdo unas pequeñas molestias, pero por lo demás todo bien."
+    },
+    {
     "fecha":"2026-10-12",
     "tipo":"Tempo",
     "distancia":13.5,
