@@ -1,5 +1,14 @@
 [
     {
+    "fecha":"2026-10-25",
+    "tipo":"Tirada",
+    "distancia":16.69,
+    "tiempo":"01:29:00",
+    "ritmo":"5:20",
+    "temperatura":"8ºC",
+    "sensaciones":"Ya se instalado el frío asique cambiamos al equipo de invierno y el ritmo también lo nota, ya no vamos tan rápido como antes pero en general las sensaciones son las mismas."
+    },
+    {
     "fecha":"2026-10-17",
     "tipo":"Tirada",
     "distancia":17.52,
