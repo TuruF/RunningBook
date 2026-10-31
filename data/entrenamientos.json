@@ -1,5 +1,14 @@
 [
     {
+    "fecha":"2026-10-31",
+    "tipo":"Tempo",
+    "distancia":14,
+    "tiempo":"01:11:45",
+    "ritmo":"5:08",
+    "temperatura":"9ºC",
+    "sensaciones":"Hoy he decidido hacer entreno de tempo y la verdad que se ha dado mejor de lo esperado, el mejor ritmo de todos y al acabar estaba genial sin sensación de morir."
+    },
+    {
     "fecha":"2026-10-25",
     "tipo":"Tirada",
     "distancia":16.69,
