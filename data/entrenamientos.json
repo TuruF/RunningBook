@@ -1,5 +1,14 @@
 [
     {
+    "fecha":"2026-11-02",
+    "tipo":"Tempo",
+    "distancia":14.35,
+    "tiempo":"01:14:00",
+    "ritmo":"5:09",
+    "temperatura":"9ºC",
+    "sensaciones":"Seguimos con entreno de tempo y el ritmo se manteniene parejo sin sufrir."
+    },
+    {
     "fecha":"2026-10-31",
     "tipo":"Tempo",
     "distancia":14,
