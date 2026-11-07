@@ -1,5 +1,14 @@
 [
     {
+    "fecha":"2026-11-07",
+    "tipo":"Tirada",
+    "distancia":17.62,
+    "tiempo":"01:33:45",
+    "ritmo":"5:19",
+    "temperatura":"8ºC",
+    "sensaciones":"Hoy ha tocado tirada larga para ir recuperendo sensaciones y recuperar el nivel, la sesión ha sido buena sin sufrir."
+    },
+    {
     "fecha":"2026-11-02",
     "tipo":"Tempo",
     "distancia":14.35,
